@@ -1,0 +1,30 @@
+#main-container {
+    place-items: center center;
+    margin-top: 120px;
+}
+
+
+#sign-in-form {
+    width: 800px;
+    max-width: 1000px;
+}
+
+.form-control:focus {
+    z-index: 5;
+}
+
+.sign-up {
+    margin-top: 6px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.error {
+    color: red;
+}
+
+.error-input {
+    border-color: red;
+}

@@ -1,0 +1,25 @@
+
+
+.screen {
+    display:flex;
+    justify-content: flex-start;
+}
+
+.sidebar {
+    flex:1;
+    min-width: 100%;
+    
+}
+
+@media only screen and (min-width: 592px) {
+    .sidebar {
+        width: 100px;
+        padding-bottom: 10px;
+    }
+}
+
+
+.content {
+    flex:3;
+    width: 100%;
+}

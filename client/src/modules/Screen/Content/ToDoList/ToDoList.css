@@ -1,0 +1,38 @@
+.ToDoList-button {
+    margin:25px;
+}
+
+.tableContainer {
+    margin-top: 10px;
+}
+
+.tableContainer-row-button {
+    margin-left: 8px;
+
+}
+
+
+
+.form-control-sm {
+    width: 463px;
+    padding:10px;
+}
+
+.form-control-sm-2 {
+    margin-left: 50px;
+    padding:10px;
+}
+
+.ToDoList-button {
+    margin: 18px 25px 33px 26px;
+
+}
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}

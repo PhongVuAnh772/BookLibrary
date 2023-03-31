@@ -1,0 +1,65 @@
+.App {
+    text-align: center;
+    height: 100vh;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+  }
+  
+  .input-container .react-datepicker-wrapper {
+    margin: 12px 0;
+    width: 100%;
+  }
+  
+  .input-container .react-datepicker-wrapper input {
+    padding: 4px 12px;
+  }
+
+  .input-container {
+    display: flex;
+  }
+  
+  .summary {
+    font-size: 18px;
+  }
+
+  .Reports-button {
+    margin-left: 43px;
+    margin-top: 60px;
+  }
+
+  .App-report-name {
+    margin-left: 30px;
+  }
+
+  .App-report-calendar-label {
+    padding-bottom: 20px;
+    font-size: 20px;
+  }
+  .App-report-logo {
+    width: 240px;
+    height: 239px;
+    margin-left: 225px;  }
+
+
+  .nav-menu-items {
+    color: black;
+  }
+  
+  .nav-menu-items-span {
+    font-size: 20px;
+  }
+
+  .active {
+    color: blue;
+  }
+

@@ -1,0 +1,14 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.f-container{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  -ms-flex-direction: column;
+}
+
+.fixed-hf .main{
+  overflow-y: auto;
+}

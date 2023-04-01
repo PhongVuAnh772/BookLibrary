@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './MostRead.css';
 import EqualizerIcon from '@mui/icons-material/Equalizer';
+import NavBar from './NavBar/NavBar';
 
 function MostRead() {
   return (
@@ -72,7 +73,11 @@ function MostRead() {
         </Row>
       </div>
       <div className='most-read--book'>
-          <div className='title' style={{borderBottom:'1px solid rgb(236,237,238)',}}><h3 style={{fontSize:'20px',marginBottom: '20px',}}>BXH Tháng</h3></div>
+          <div className='title' style={{borderBottom:'2px solid rgb(236,237,238)',display:'flex',flexWrap:'no-wrap'}}>
+            <h3 style={{fontSize:'20px',marginBottom: '30px',}}>Đọc nhiều nhất
+            </h3>
+            <NavBar />
+          </div>
       </div>
     </div>
   )

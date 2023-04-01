@@ -5,7 +5,8 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "@mui/material": "^5.11.12",
+    "@mui/icons-material": "^5.11.11",
+    "@mui/material": "^5.11.15",
     "@mui/x-date-pickers": "^6.0.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -27,9 +28,11 @@
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.8.2",
     "react-scripts": "^5.0.1",
+    "react-slick": "^0.29.0",
     "react-ymd-date-select": "^0.3.0",
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
+    "slick-carousel": "^1.8.1",
     "swiper": "^9.1.1",
     "web-vitals": "^2.1.4"
   },

@@ -29,8 +29,10 @@ function Slider({ slides }) {
 
   >
     {slides.map((slide) => (
-      <SwiperSlide key={slide.image}>
-        <img src={slide.image} alt={slide.title}style={{width: '1100px',height: '278px'}}/>
+      <SwiperSlide key={slide.content}> 
+        <p>{slide.author}</p>
+        <p>{slide.content}</p>
+
       </SwiperSlide>
     ))}
   </Swiper></div>

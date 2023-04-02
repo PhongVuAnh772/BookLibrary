@@ -9,21 +9,22 @@ a:hover {
 }
 
 .nav {
-  display: flex;
   align-items: center;
-  justify-content: space-around;
+  
   position: fixed;
   z-index: 9999999999999999999999999999999999999;
   background: rgb(255, 255, 255);
   height: 99px;
   min-width: 100%;
   list-style-type: none;
+  
 }
 .nav__brand {
   text-transform: uppercase;
   margin-bottom: 60px;
   position: relative;
-  left: -160px;
+  left: 50px;
+  bottom: -5px;
 }
 
 .nav__menu {
@@ -32,7 +33,9 @@ a:hover {
   justify-content: space-around;
   gap: 3rem;
   list-style-type: none;
-
+  left: -10px;
+  top: -40px;
+  position: relative;
 }
 .nav__toggler {
   display: none;
@@ -60,4 +63,28 @@ a:hover {
 }
 .toggle .line3 {
   transform: rotate(45deg) translate(-4px, -5px);
+}
+
+.form {
+    width: 353px;
+    height: 20px;
+    border-right: none;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    font-size: 13px;
+    left: 220px;
+    top: 10px;
+  position: relative;
+}
+
+.text-form--button {
+  left: 220px;
+    top: 10px;
+    position: relative;
+
+
+}
+
+.text-form  {
+  display: flex;
 }

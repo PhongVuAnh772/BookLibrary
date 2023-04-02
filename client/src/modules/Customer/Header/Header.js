@@ -1,6 +1,8 @@
 import {React, useState} from 'react'
-
+import {AiOutlineUnorderedList} from 'react-icons/ai'
 import './Header.css'
+import TextField from "@mui/material/TextField";
+
 
 function Header() {
   const [active, setActive] = useState("nav__menu");
@@ -18,35 +20,55 @@ function Header() {
   return (
     <nav className="nav">
       <a href="#3" className="nav__brand">
-        herdoy
+        <img alt="" src="https://ebook.waka.vn/themes/desktop/images/logo-waka.png?v=1" style={{width: '110px',
+    height: '34px'}}/>
       </a>
+      <div className='content-center'>
+        <div className="text-form">
+          <input
+          id="outlined-basic"
+          variant="outlined"
+          label="Search"
+          className='form'
+          placeholder="Nhập tên sách"
+        />
+          <div className="text-form--button"><button style={{height: '20px',width:'50px',padding:'4px 12px 4px 29px'}}>Tìm kiếm</button></div>
+        </div>
+
       <ul className={active}>
         <li className="nav__item">
           <a href="#5" className="nav__link">
-            Home
+            <AiOutlineUnorderedList style={{marginRight: '10px',marginLeft: '3px'}}/>
+          Danh mục
           </a>
         </li>
         <li className="nav__item">
           <a href="#6" className="nav__link">
-            About
+          Sách mới nhất
+          </a>
+        </li>
+        <li className="nav__item">
+          <a href="#6" className="nav__link">
+          Bảng xếp hạng
           </a>
         </li>
         <li className="nav__item">
           <a href="#7" className="nav__link">
-            Portfolio
+          Miễn phí HOT
           </a>
         </li>
         <li className="nav__item">
           <a href="#7" className="nav__link">
-            Skills
+          Tuyển tập
           </a>
         </li>
         <li className="nav__item">
-          <a href="#1" className="nav__link">
-            Contact
+          <a href="#2" className="nav__link">
+            Khuyên đọc
           </a>
         </li>
       </ul>
+      </div>
       <div onClick={navToggle} className={icon}>
         <div className="line1"></div>
         <div className="line2"></div>

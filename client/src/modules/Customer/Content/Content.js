@@ -1,4 +1,4 @@
-import React from 'react'
+import {React,useState} from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Scrollbar, A11y, EffectCube } from "swiper";
 
@@ -20,7 +20,30 @@ import BestSelections from './BestSelections/BestSelections'
 import BookRead from './BookRead/BookRead'
 import Benefits from './Benefits/Benefits'
 import Quotes from './Quotes/Quotes'
+import './Content.css'
 function Content() {
+  const [visible, setVisible] = useState(false)
+  const toggleVisible = () => {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 300){
+      setVisible(true)
+    } 
+    else if (scrolled <= 300){
+      setVisible(false)
+    }
+  };
+  
+  const scrollToTop = () =>{
+    window.scrollTo({
+      top: 0, 
+      behavior: 'smooth'
+      /* you can also use 'auto' behaviour
+         in place of 'smooth' */
+    });
+  };
+  
+  window.addEventListener('scroll', toggleVisible);
+  
   return (
     <div className="content">
           <Slider slides={slider}/>
@@ -35,7 +58,22 @@ function Content() {
           <BookRead />
           <Benefits />
           <Quotes />
-
+          <div className="sidebar">
+            <li>
+            <div className="sidebar-news">
+    
+             </div>
+             <button style={{border: '0px', display: visible ? 'inline' : 'none' }} className="sidebar-backtop" onClick={scrollToTop}>
+            </button>
+            </li>
+          </div>
+          <div className="massages">
+            <div className="massages-icons">
+            </div>
+            <div className="massages-text">
+              <p className="massages-text-content">Hỗ trợ</p>
+            </div>
+          </div>
     </div>
   )
 }

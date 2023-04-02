@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './NavBar.css'
+import {NavLink,createBrowserRouter,createRoutesFromElements,RouterProvider,Outlet} from 'react-router-dom'
 
 function NavBar() {
   return (
@@ -12,27 +13,28 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#all" className="nav-link-box">Tất cả
-            </Nav.Link>
-                        <Nav.Link href="#work" className="nav-link-box">Kỹ năng làm việc
-            </Nav.Link>
-            <Nav.Link href="#child" className="nav-link-box">Nuôi dạy con
+            <NavLink to="/all" className="nav-link-box">Tất cả
+            </NavLink>
+                        <NavLink to="/work" className="nav-link-box">Kỹ năng làm việc
+            </NavLink>
+            <NavLink to="/child" className="nav-link-box">Nuôi dạy con
 
-            </Nav.Link><Nav.Link href="#manage" className="nav-link-box">Quản trị - lãnh đạo
+            </NavLink><NavLink to="/manage" className="nav-link-box">Quản trị - lãnh đạo
 
-            </Nav.Link>
-            <Nav.Link href="#comic" className="nav-link-box">Truyện dài - Tiểu thuyết
+            </NavLink>
+            <NavLink to="/comic" className="nav-link-box">Truyện dài - Tiểu thuyết
 
 
-            </Nav.Link>
+            </NavLink>
 
               
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
+        {/* <div className="content"><Outlet/></div> */}
     </div>
-  )
+  ) 
 }
 
 export default NavBar

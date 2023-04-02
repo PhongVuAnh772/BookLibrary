@@ -14,7 +14,7 @@ function MostRead() {
           <Col>
             <div className="title" style={{fontSize: '16px',fontWeight:400,lineHeight:'17.6px',marginTop: '12px',paddingLeft: '5px'}}>
               <span style={{paddingRight: '28px'}}>BXH THÁNG 04/2023</span>
-              <EqualizerIcon style={{marginBottom: '4px'}} />
+              <EqualizerIcon style={{marginBottom: '4px',color: '#dfdfdf'}} />
             </div>
           </Col>
         </Row>
@@ -26,9 +26,8 @@ function MostRead() {
                 src="https://cdn.vegaid.vn/VxGVOCyj2W/250x125x1544056819/768/746/bb6/768746bb65b314162fa2891e2d2c2ece.jpg" 
                 style= {{width: '100%',height: '125px'}}
                 />
-                <div className="user-top users">
-                    <p className="name-users">yangzzang1***<span className="users-using">684 phút</span></p>
-                    
+                <div className="user-top">
+                    <p className="name-users-top">yangzzang1***</p>
                 </div>
             </div>
             
@@ -36,38 +35,38 @@ function MostRead() {
         </Row>
         <Row >
           <Col><div className="users">
-          <p className="name-users">yangzzang1***<span className="users-using">684 phút</span></p>
+          <p className="name-users"><span className="users-using-top" style={{color:'red'}}>1,072 phút</span></p>
 
             </div></Col>
         </Row>
         <Row >
           <Col><div className="users">
-          <p className="name-users">yangzzang1***<span className="users-using">684 phút</span></p>
+          <p className="name-users"><span style={{color: 'rgb(251, 173, 42)'}}>1</span>&nbsp;&nbsp;&nbsp;&nbsp;tranngocphu.**<span className="users-using" style={{color: 'rgb(251, 173, 42)'}}>956 phút</span></p>
 
             </div></Col>
         </Row>
         <Row >
           <Col><div className="users">
-          <p className="name-users">yangzzang1***<span className="users-using">684 phút</span></p>
+          <p className="name-users"><span style={{color: 'rgb(251, 173, 42)'}}>2</span>&nbsp;&nbsp;&nbsp;&nbsp;moc***<span className="users-using" style={{color: 'rgb(78, 212, 36)'}}>767 phút</span></p>
 
             </div></Col>
         </Row>
         <Row >
           <Col><div className="users">
-          <p className="name-users">yangzzang1***<span className="users-using">684 phút</span></p>
+          <p className="name-users"><span >3</span>&nbsp;&nbsp;&nbsp;&nbsp;meomeomeomeo<span className="users-using">474 phút</span></p>
 
             </div></Col>
         </Row>
         
         <Row >
           <Col><div className="users">
-          <p className="name-users">yangzzang1***<span className="users-using">684 phút</span></p>
+          <p className="name-users"><span >4</span>&nbsp;&nbsp;&nbsp;&nbsp;tel_0964781***<span className="users-using">343 phút</span></p>
 
             </div></Col>
         </Row>
         <Row >
           <Col><div className="users">
-          <p className="name-users">yangzzang1***<span className="users-using">684 phút</span></p>
+          <p className="name-users"><span >5</span>&nbsp;&nbsp;&nbsp;&nbsp;fb117601711297<span className="users-using">231 phút</span></p>
 
             </div></Col>
         </Row>

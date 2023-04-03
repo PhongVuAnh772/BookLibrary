@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;400&display=swap");
 
 a {
   text-decoration: none;
@@ -23,8 +24,8 @@ a:hover {
   text-transform: uppercase;
   margin-bottom: 60px;
   position: relative;
-  left: 50px;
-  bottom: -5px;
+  right: -200px;
+  bottom: -7px;
 }
 
 .nav__menu {
@@ -33,7 +34,7 @@ a:hover {
   justify-content: space-around;
   gap: 3rem;
   list-style-type: none;
-  left: -10px;
+  right: -50px;
   top: -40px;
   position: relative;
 }
@@ -65,26 +66,118 @@ a:hover {
   transform: rotate(45deg) translate(-4px, -5px);
 }
 
+.nav__link {
+  font-size: 13px;
+  color: rgb(58,71,82);
+  font-family:Arial, Helvetica, sans-serif;
+}
+
 .form {
-    width: 353px;
-    height: 20px;
+    
     border-right: none;
     padding-left: 4px;
     padding-bottom: 4px;
+    
     font-size: 13px;
-    left: 220px;
-    top: 10px;
+    left: 280px;
+    top: 25px;
   position: relative;
+  border: 0.8px solid rgba(0,0,0,0.15);
+  width: 328px;
+  height: 26.8px;
+}
+.text-form--button {
+  left: 280px;
+    top: 24px;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    border-radius: .25rem;
+    transition: all .15s ease-in-out;
 }
 
+
 .text-form--button {
-  left: 220px;
-    top: 10px;
+    
     position: relative;
+    
+    border-right: none;
+    
+    font-size: 13px;
+    width: 94px;
+    text-align: center;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background: #1ba085 url(https://ebook.waka.vn/themes/desktop/reactjs/images/icon/search-icon.png) no-repeat;
+    background-position: 10px 6px;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    padding-left: 29px;
+    color: #fff;
+    cursor: pointer;
 
+} 
 
+.text-form--img {
+  left: 460px;
+    top: 24px;
+    position: relative;
+    
+}
+
+.text-form--img-2 {
+  left: 500px;
+    top: 24px;
+    position: relative;
 }
 
 .text-form  {
   display: flex;
+}
+
+
+.text-form--button__login {
+  position: relative;
+    
+    height: 30px;
+    font-size: 13px;
+    width: 95px;
+    text-align: center;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background: #1ba085 url("") no-repeat;
+    background-position: 10px 6px;
+    
+    color: #fff;
+    cursor: pointer;
+    left: 545px;
+    top: 24px;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 4px 12px 4px 17px;
+   
+    line-height: 1.25;
+    border-radius: .25rem;
+    transition: all .15s ease-in-out;
 }

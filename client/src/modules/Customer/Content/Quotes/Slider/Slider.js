@@ -10,33 +10,27 @@ import './Slider.css'
 
 function Slider({ slides }) {
   return (
-    <div className="Slider"><Swiper
-    modules={[Autoplay,Navigation, Pagination, Scrollbar, A11y, EffectCube,EffectFade]}
-    spaceBetween={50}
-    slidesPerView={3}
-    effect={"fade"}
-    autoplay={{
-      delay: 2500,
-      disableOnInteraction: false
-  }}
-    cubeEffect={{
-      shadow: true,
-      slideShadows: true,
-      shadowOffset: 20,
-      shadowScale: 0.94,
-    }}
-    style={{width: '1100px',height: '278px'}}
-
-  >
-    {slides.map((slide) => (
-      <SwiperSlide key={slide.content}> 
-        <p>{slide.author}</p>
-        <p>{slide.content}</p>
+    <Swiper
+      // install Swiper modules
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      spaceBetween={50}
+      slidesPerView={1}
+      navigation= {
+        {prevEl: '.slidePrev-btn',
+        nextEl: '.slideNext-btn'}
+      }
+    >
+      {slides.map((slide) => (
+      <SwiperSlide key={slide.content} className='slide'> 
+        <p className="author">{slide.author}</p>
+        <p className="content">{slide.content}</p>
 
       </SwiperSlide>
     ))}
-  </Swiper></div>
-  )
-}
+    </Swiper>
+     );
+    };
+  //   
+  
 
 export default Slider

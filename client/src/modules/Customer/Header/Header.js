@@ -32,8 +32,11 @@ function Header() {
           className='form'
           placeholder="Nhập tên sách"
         />
-          <div className="text-form--button"><button style={{height: '20px',width:'50px',padding:'4px 12px 4px 29px'}}>Tìm kiếm</button></div>
-        </div>
+          <div><button className="text-form--button">Tìm kiếm</button></div>
+          <div><img alt="" src="https://ebook.waka.vn/themes/desktop/images/hieu-soi.png" className="text-form--img"/></div>
+          <div><img alt="" src="	https://ebook.waka.vn/themes/desktop/reactjs/images/1366/waka-vip.png" className="text-form--img-2"/></div>
+          <div><button className="text-form--button__login">Đăng nhập</button></div>
+      </div>
 
       <ul className={active}>
         <li className="nav__item">

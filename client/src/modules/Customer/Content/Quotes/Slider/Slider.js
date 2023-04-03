@@ -12,16 +12,21 @@ function Slider({ slides }) {
   return (
     <Swiper
       // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      modules={[Autoplay,Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
       slidesPerView={1}
       navigation= {
         {prevEl: '.slidePrev-btn',
         nextEl: '.slideNext-btn'}
       }
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false
+    }}
     >
       {slides.map((slide) => (
       <SwiperSlide key={slide.content} className='slide'> 
+        <img alt="" src="https://ebook.waka.vn/themes/desktop/reactjs/images/icon/quote-icon.png" style={{position:'relative',top:'-20px'}}/>
         <p className="author">{slide.author}</p>
         <p className="content">{slide.content}</p>
 

@@ -4,20 +4,23 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    margin-left: -191px;
     
-    margin-top: -52px;
-
   }
   
-  
+  .navbar-test {
+    margin-right: -10px;
+    position: relative;
+    margin-top: -60px;
+    margin-left: -180px;
+  }
   .nav-menu {
     width: 250px;
-    height: 100vh;
+    height: 50px;
     display: flex;
     justify-content: center;
+    position: relative;
 
-    top: 0;
+    top: -300px;
     left: 0;
     transition: 850ms;
   }
@@ -33,6 +36,7 @@
     align-items: center;
     list-style: none;
     height: 60px;
+    
   }
   
   .nav-text a {
@@ -53,7 +57,7 @@
   }
   
   .nav-menu-items {
-    width: 100%;
+    width: 240px;
     padding: 0;
   }
   

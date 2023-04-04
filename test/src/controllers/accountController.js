@@ -29,7 +29,7 @@ let registerUser = async (req, res) => {
                 let checkCreateAccount = await db.Account.create({
                     user_name: user_name,
                     password: password,
-                    role: 'ADMIN'
+                    role: 'GUEST'
                 })
                 if (checkCreateAccount) {
                     return res.status(200).json({

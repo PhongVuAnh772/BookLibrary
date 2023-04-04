@@ -7,7 +7,7 @@ function SideBar() {
   return (
     <>
       
-        <nav>
+        <nav className='navbar-test'>
           <ul className={'nav-menu-items' ? 'nav-menu-items active' : 'nav-menu-items'}>
             {SideBarRow.map((item, index) => {
               return (

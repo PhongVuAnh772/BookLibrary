@@ -59,7 +59,7 @@ function Header() {
           <div><button className="text-form--button">Tìm kiếm</button></div>
           <div><img alt="" src="https://ebook.waka.vn/themes/desktop/images/hieu-soi.png" className="text-form--img"/></div>
           <div><img alt="" src="	https://ebook.waka.vn/themes/desktop/reactjs/images/1366/waka-vip.png" className="text-form--img-2"/></div>
-          <div><button className="text-form--button__login">Đăng nhập</button></div>
+          <div><button className="text-form--button__login" >Đăng nhập</button></div>
       </div>
 
       <ul className={active} style={{border: '0px', display: hideElement ? '' : '' }}>

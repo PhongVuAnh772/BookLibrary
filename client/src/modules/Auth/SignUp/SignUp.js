@@ -67,7 +67,7 @@ function SignUp() {
     let response = await axios.post('http://localhost:5000/api/register', {user_name: email, password: PassWord, rePassword: RePassWord});
     if(response && response.data && response.data.success === true) {
       console.log("Successfully register")
-      navigate("/screen/home");    
+      navigate("/customer");    
     }else {
       setMessagePassError(response.data.message)
     }

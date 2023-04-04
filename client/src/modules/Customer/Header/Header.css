@@ -149,8 +149,7 @@ a:hover {
 
 
 .text-form--button__login {
-  position: relative;
-    
+    position: relative;   
     height: 30px;
     font-size: 13px;
     width: 95px;
@@ -180,4 +179,12 @@ a:hover {
     line-height: 1.25;
     border-radius: .25rem;
     transition: all .15s ease-in-out;
+}
+
+.width {
+  height: 50px;
+}
+
+.height-search {
+  top: -19px;
 }

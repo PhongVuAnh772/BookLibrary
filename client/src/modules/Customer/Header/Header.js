@@ -1,4 +1,4 @@
-import {React, useState} from 'react'
+import {React, useState,useEffect} from 'react'
 import {AiOutlineUnorderedList} from 'react-icons/ai'
 import './Header.css'
 import TextField from "@mui/material/TextField";
@@ -7,6 +7,30 @@ import TextField from "@mui/material/TextField";
 function Header() {
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
+  const [hideElement, setHideElement] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+  const [isActiveSearch, setIsActiveSearch] = useState(false);
+
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.pageYOffset >= 300) {
+        setHideElement(true);
+        // setIsActive(current => !current);
+        setIsActiveSearch(current => !current);
+
+
+      } else {
+        setHideElement(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   const navToggle = () => {
     if (active === "nav__menu") {
       setActive("nav__menu nav__active");
@@ -18,7 +42,7 @@ function Header() {
     } else setIcon("nav__toggler");
   };
   return (
-    <nav className="nav">
+    <nav className={`nav ${isActive ? 'width' : ''}`}>
       <a href="#3" className="nav__brand">
         <img alt="" src="https://ebook.waka.vn/themes/desktop/images/logo-waka.png?v=1" style={{width: '110px',
     height: '34px'}}/>
@@ -29,7 +53,7 @@ function Header() {
           id="outlined-basic"
           variant="outlined"
           label="Search"
-          className='form'
+          className={`form ${isActive ? '' : ''}`}
           placeholder="Nhập tên sách"
         />
           <div><button className="text-form--button">Tìm kiếm</button></div>
@@ -38,8 +62,8 @@ function Header() {
           <div><button className="text-form--button__login">Đăng nhập</button></div>
       </div>
 
-      <ul className={active}>
-        <li className="nav__item">
+      <ul className={active} style={{border: '0px', display: hideElement ? '' : '' }}>
+        <li className="nav__item" >
           <a href="#5" className="nav__link">
             <AiOutlineUnorderedList style={{marginRight: '10px',marginLeft: '3px'}}/>
           Danh mục
@@ -81,4 +105,4 @@ function Header() {
   );
 }
 
-export default Header
+export default Header;

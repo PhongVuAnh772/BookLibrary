@@ -1,85 +1,80 @@
 .most-read {
-    display: flex;
-    flex-wrap:nowrap;
-    height: 530px;
-    max-width: 1100px;
-    
+  display: flex;
+  flex-wrap: nowrap;
+  height: 530px;
+  max-width: 1100px;
 }
 
 .most-read--top-reader {
-    box-shadow: 5px 10px 18px rgba(0,0,0,0.2);
-    background-color: rgb(255, 255, 255);
+  box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 255, 255);
 }
 
 .most-read--book {
-    width: 100%;
-    padding-left: 30px;
+  width: 100%;
+  padding-left: 30px;
 }
 
 .users {
-    width: 100%;
-    height: 60px;
-    /* background-color: rgba(255,255,255,.8); */
-    bottom: 0;
-    margin-bottom: 12px;
+  width: 100%;
+  height: 60px;
+  /* background-color: rgba(255,255,255,.8); */
+  bottom: 0;
+  margin-bottom: 12px;
 }
 
 .title {
-    width: 100%;
-    height: 30px;
-    /* background-color: rgba(255,255,255,.8); */
-    bottom: 0;
-    margin-bottom: 12px;
+  width: 100%;
+  /* background-color: rgba(255,255,255,.8); */
+  bottom: 0;
+  margin-bottom: 12px;
 }
 
 .img-user--top {
-    position: relative;
+  position: relative;
 }
 .user-top {
-    position: absolute;
-    top: 65px;
-    background-color: rgba(255,255,255,.8);
-    display: flex;
-    width: 100%;
-    height: 60px;
-    /* background-color: rgba(255,255,255,.8); */
-    bottom: 0;
-    margin-bottom: 12px;
-    line-height: 53px;
+  position: absolute;
+  top: 65px;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  width: 100%;
+  height: 60px;
+  /* background-color: rgba(255,255,255,.8); */
+  bottom: 0;
+  margin-bottom: 12px;
+  line-height: 53px;
 }
 .name-users-top {
-    font-size: 18px;
-    width: 150px;
-    color: #ee2843;
-    margin-left: 16px;
+  font-size: 18px;
+  width: 150px;
+  color: #ee2843;
+  margin-left: 16px;
 }
 .users {
-    display: flex;
-    flex-wrap: nowrap;
-    line-height: 22px;
+  display: flex;
+  flex-wrap: nowrap;
+  line-height: 22px;
 }
 
 .name-users {
   margin-left: -4px;
   font-size: 15px;
-
 }
 
 .users-using {
-    margin-right: 10px;
-    right: 1068px;
-    /* bottom: 83px; */
-    position: absolute;
-    margin-top: 1px;
+  margin-right: 10px;
+  right: 1055px;
+  /* bottom: 83px; */
+  position: absolute;
+  margin-top: 1px;
 }
 
 .users-using-top {
-    margin-right: 24px;
-    right: 1053px;
-    /* bottom: 83px; */
-    position: absolute;
-    margin-top: 10px;
-    margin-left: 40px;
+  margin-right: 24px;
+  right: 1040px;
+  /* bottom: 83px; */
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 40px;
 }
-
-

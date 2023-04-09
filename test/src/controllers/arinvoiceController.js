@@ -41,8 +41,9 @@ const deleteData = async (req, res) => {
         message: `Không tìm thấy dữ liệu ${ids}`,
       });
     }
+
     await Arinvoices.update({ customer_id: true });
-    res.send({ message: "Rule deleted successfully" });
+    res.send({ message: "Arinvoices deleted successfully" });
   } catch (error) {
     console.error(error);
     return res.status(200).json({

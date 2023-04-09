@@ -9,7 +9,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { Button, Container, Form, FormGroup } from "react-bootstrap";
 import { FcCurrencyExchange } from "react-icons/fc";
-import Modal from "react-bootstrap/Modal";
+import ShowInvoice from "./showInvoice";
 
 import axios from "axios";
 
@@ -37,52 +37,14 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 export default function Collection() {
   const [multiData, setMultiData] = useState([]);
+  const [indexOf, setIndexOf] = useState(null);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  function handleClick(e, index, row) {
-    console.log(e, index, row);
-    return (
-      <>
-        <Modal
-          show={show}
-          onHide={handleClose}
-          size="xl"
-          aria-labelledby="contained-modal-title-vcenter"
-          centered
-        >
-          <Modal.Header closeButton>
-            <Modal.Title id="contained-modal-title-vcenter">Thu nợ</Modal.Title>
-          </Modal.Header>
-          <Modal.Body
-            style={{
-              marginRight: "5px",
-              maxHeight: "70vh",
-              overflow: "scroll",
-            }}
-          >
-            <TableContainer component={Paper} className="tableContainer">
-              <Table sx={{ minWidth: 1000 }} aria-label="customized table">
-                <TableHead>
-                  <TableRow>
-                    <StyledTableCell align="right">
-                      Số lượng mua
-                    </StyledTableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody></TableBody>
-              </Table>
-            </TableContainer>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="primary" onClick={handleShow}>
-              Mua hàng{" "}
-            </Button>
-          </Modal.Footer>
-        </Modal>
-      </>
-    );
-  }
+  const handleShow = (index) => {
+    setIndexOf(index);
+    setShow(true);
+  };
+
   useEffect(() => {
     async function fetchUsers() {
       const response = await axios.get(
@@ -124,6 +86,13 @@ export default function Collection() {
                   >
                     <FcCurrencyExchange />
                   </Button>
+                  {indexOf !== null && (
+                    <ShowInvoice
+                      index={indexOf}
+                      isOpen={show}
+                      handleClose={handleClose}
+                    />
+                  )}
                 </StyledTableCell>
               </StyledTableRow>
             ))}

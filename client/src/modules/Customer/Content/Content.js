@@ -20,9 +20,12 @@ import BestSelections from './BestSelections/BestSelections'
 import BookRead from './BookRead/BookRead'
 import Benefits from './Benefits/Benefits'
 import Quotes from './Quotes/Quotes'
+import Cart from './Cart/Cart'
 import './Content.css'
+import './Cart/Cart.css'
 function Content() {
   const [visible, setVisible] = useState(false)
+  const [showModal, setShowModal] = useState(false);
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
     if (scrolled > 300){
@@ -44,6 +47,9 @@ function Content() {
   
   window.addEventListener('scroll', toggleVisible);
   
+  const handleOnClick = () => {
+    console.log('???')
+  }
   return (
     <div className="content">
           <Slider slides={slider}/>
@@ -58,10 +64,16 @@ function Content() {
           <BookRead />
           <Benefits />
           <Quotes />
+
           <div className="sidebar">
             <li>
-            <div className="sidebar-news">
-    
+            <div className="">
+                <button type="button" className="sidebar-news" onClick={() => {
+            setShowModal(!showModal);
+
+          }}></button>
+                      <Cart showModal={showModal} setShowModal={setShowModal} />
+
              </div>
              <button style={{border: '0px', display: visible ? 'inline' : 'none' }} className="sidebar-backtop" onClick={scrollToTop}>
             </button>

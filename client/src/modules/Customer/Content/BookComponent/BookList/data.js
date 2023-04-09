@@ -1,9 +1,4 @@
-import image1 from "./assets/carouselImage1.jpg";
-import image2 from "./assets/carouselImage2.jpg";
-import image3 from "./assets/carouselImage3.jpg";
-import image4 from "./assets/carouselImage4.jpg";
-import image5 from "./assets/carouselImage5.jpg";
-import image6 from "./assets/carouselImage6.jpg";
+
 
 import multicar1 from "./assets/multicar1.jpeg";
 import multicar2 from "./assets/multicar2.jpeg";
@@ -17,7 +12,6 @@ import multicar9 from "./assets/multicar9.jpeg";
 import multicar10 from "./assets/multicar10.jpeg";
 import multicar11 from "./assets/multicar11.jpeg";
 
-export const data = [image1, image2, image3, image4, image5, image6];
 export const multiData = [
   multicar1,
   multicar10,

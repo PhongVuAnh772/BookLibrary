@@ -2,11 +2,12 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './carousel.css';
-import { data, multiData } from './data';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import axios from 'axios';
+
 let slidesToShow = 5;
 const PreviousBtn = (props) => {
   console.log(props);
@@ -70,14 +71,23 @@ const carouselProperties = {
 
 const MultiItemCarousel = () => {
   const [width, setWidth] = useState(window.innerWidth);
+  const [multiData, setMultiData] = useState([])
+
   const updateWidth = () => {
     setWidth(window.innerWidth);
   };
-
+  useEffect(() => {
+    async function fetchUsers() {
+      const response = await axios.get('http://localhost:5000/api/purchaseorder');
+      setMultiData(response.data);
+    }
+    fetchUsers();
+  }, []);
   useEffect(() => {
     window.addEventListener('resize', updateWidth);
     return () => window.removeEventListener('resize', updateWidth);
   }, []);
+  
 
   if (width <= 426) {
     slidesToShow = 1;
@@ -93,7 +103,22 @@ const MultiItemCarousel = () => {
     <div style={{ margin: '30px' }} className='carousel'>
       <Slider {...carouselProperties}>
         {multiData.map((item) => (
-          <Card item={item} />
+          
+            <div style={{ textAlign: 'center',marginLeft: '40px' }}>
+              <img
+                className='multi__image'
+                src={item.cover_book}
+                alt=''
+                style={{
+                  width: '100%',
+                  height: '206px',
+                  objectFit: 'contain',
+                  marginBottom: '10px',
+                }}
+              />
+              
+            </div>
+          
         ))}
       </Slider>
     </div>
@@ -101,22 +126,7 @@ const MultiItemCarousel = () => {
 };
 
 const Card = ({ item }) => {
-  return (
-    <div style={{ textAlign: 'center',marginLeft: '40px' }}>
-      <img
-        className='multi__image'
-        src={item}
-        alt=''
-        style={{
-          width: '100%',
-          height: '206px',
-          objectFit: 'contain',
-          marginBottom: '10px',
-        }}
-      />
-      
-    </div>
-  );
+  
 };
 
 export default MultiItemCarousel;

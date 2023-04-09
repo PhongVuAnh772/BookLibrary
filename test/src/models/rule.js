@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
     rule_desciption: DataTypes.STRING,
     rule_name: DataTypes.STRING,
     status: DataTypes.STRING,
+    is_deleted: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'Rule',

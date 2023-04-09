@@ -11,7 +11,7 @@ const insertData = (data) => new Promise(async(resolve, reject) => {
             rule_name: data.rule_name,
             rule_desciption: data.rule_desciption,
             status: data.status,
-            
+            is_deleted: data.is_deleted
         })
         if(!check){
             resolve({

@@ -1,7 +1,9 @@
 
 
 .sidebar-news {
-    background: transparent url('https://ebook.waka.vn/themes/desktop/reactjs/images/icon/r-info-icon.png') no-repeat;
+    background: transparent url('../assets/cart-fill.svg') no-repeat;
+    background-color: rgb(27, 160, 133);
+    background-position: center;
     width: 34px;
     height: 34px;
     display: block;
@@ -9,6 +11,7 @@
     border-radius: 50%;
     transition: all .2s ease;
     cursor: pointer;
+    border: 0;
 }
 
 .sidebar-backtop {

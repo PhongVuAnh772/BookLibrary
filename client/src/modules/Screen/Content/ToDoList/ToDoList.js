@@ -68,7 +68,7 @@ export default function ToDoList() {
     console.log(data.price);
   }
   const handleClickDelete = (event, key) => {
-    axios.delete(`http://localhost:5000/api/delete-row/${key}`)
+    axios.delete(`http://localhost:5000/api/delete-rule/${key}`)
   .then(response => {
     console.log(response.data);
   })

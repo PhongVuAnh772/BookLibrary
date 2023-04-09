@@ -28,10 +28,10 @@ module.exports = {
         type: Sequelize.INTEGER
 
       },
-      category_code: {
-        type: Sequelize.STRING
-
-      },
+      
+      book_description: {type: Sequelize.STRING},
+      cover_book: {type: Sequelize.STRING},
+      
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

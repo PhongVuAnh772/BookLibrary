@@ -7,7 +7,7 @@ import {
   FcTodoList,
   FcCollaboration,
   FcRedo,
-  FcPhoneAndroid
+  FcPhoneAndroid,
 } from "react-icons/fc";
 
 export const SideBarRow = [
@@ -24,7 +24,7 @@ export const SideBarRow = [
     cName: "nav-text",
   },
   {
-    title: "Lập hóa đơn",
+    title: "Lập phiếu mượn",
     path: "/screen/bill",
     icon: <FcMoneyTransfer />,
     cName: "nav-text",
@@ -36,7 +36,7 @@ export const SideBarRow = [
     cName: "nav-text",
   },
   {
-    title: "Phiếu nhập sách mới",
+    title: "Quản lý nhân viên",
     path: "/screen/newProduct",
     icon: <FcPhoneAndroid />,
     cName: "nav-text",
@@ -53,11 +53,11 @@ export const SideBarRow = [
     icon: <FcTodoList />,
     cName: "nav-text",
   },
-  
+
   {
     title: "Đăng xuất",
     path: "/",
     icon: <FcRedo />,
     cName: "nav-text",
-  }
+  },
 ];

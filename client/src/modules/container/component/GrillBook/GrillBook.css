@@ -1,0 +1,38 @@
+.pagination > li > button {
+    background-color: white;
+    color: black;
+    height: 30px;
+    width: 30px;
+    border-radius: 4px;
+}
+
+.pagination > li > button:focus,
+.pagination > li > button:hover {
+    border: 1px solid #1ba085;
+}
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+    color: #5a5a5a;
+    background-color: #eee;
+}
+
+.pagination > .active > button {
+    color: white;
+    background-color: #1ba085 !important;
+    border: solid 1px #1ba085 !important;
+}
+
+.pagination > .active > button:hover {
+    background-color: #1ba085 !important;
+    border: solid 1px #1ba085;
+}
+.page-link:focus {
+    box-shadow: none;
+}
+.container {
+    min-height: 732px;
+}
+
+.test {
+    z-index: 0;
+}

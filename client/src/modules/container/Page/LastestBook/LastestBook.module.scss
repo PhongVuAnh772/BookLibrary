@@ -1,0 +1,86 @@
+.news {
+    background-color: #81cddc;
+    width: 250px;
+    height: 956px;
+    border-radius: 5px;
+    .title-news {
+        height: 127px;
+        width: 220px;
+        max-width: 220px;
+        background: aqua;
+        margin: 10px 15px 15px;
+        border-radius: 5px;
+        background-color: transparent;
+        position: relative;
+        .left-top-corner {
+            border: 2px solid #fff;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .right-top-corner {
+            border: 2px solid #fff;
+            border-left-color: transparent;
+            border-bottom-color: transparent;
+            right: 0;
+            top: 0;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+        }
+        .right-bottom-corner {
+            border: 2px solid #fff;
+            border-left-color: transparent;
+            border-top-color: transparent;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+        }
+        .left-bottom-corner {
+            border: 2px solid #fff;
+            border-right-color: transparent;
+            border-top-color: transparent;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+        }
+        .schedule-desc {
+            padding-top: 18px;
+            h2 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 30px;
+            }
+        }
+    }
+    div {
+        ul :hover {
+            box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+            border: 1px solid #ccc;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-right: 32px;
+            transition: box-shadow 3s;
+            li {
+                border-radius: 5px;
+                width: 220px;
+                height: 102px;
+                margin-bottom: 20px;
+                background-color: yellow;
+            }
+        }
+    }
+}

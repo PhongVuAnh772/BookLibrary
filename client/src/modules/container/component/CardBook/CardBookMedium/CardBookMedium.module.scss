@@ -1,0 +1,134 @@
+.wrapper {
+    width: 260px;
+    height: 228px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: end;
+    .div {
+        border: 1px solid rgb(251, 248, 248);
+        border-radius: 3px;
+        box-shadow: 0 0 5px rgba(33, 33, 33, 0.2);
+        background-color: white;
+        transition: all 0.2s linear;
+        &:hover {
+            border: 1px solid #1ba085;
+        }
+        .content {
+            width: 260px;
+            height: 168px;
+            display: flex;
+            justify-content: space-evenly;
+            transition: all 0.2s linear;
+            &:hover {
+                cursor: pointer;
+                .book-icon {
+                    display: block;
+                }
+                .detail {
+                    display: block;
+                    background-color: #058168;
+                }
+            }
+            .book-icon {
+                position: absolute;
+                margin-left: 30px;
+                font-size: 37px;
+                padding: 5px;
+                margin-top: 45px;
+                margin-right: 135px;
+                background-color: #1ba085;
+                border-radius: 50%;
+                display: none;
+            }
+            .detail {
+                position: absolute;
+                width: 90px;
+                height: 28px;
+                margin-left: 155px;
+                border: 1px solid white;
+                background-color: #1ba085;
+                border-radius: 3px;
+                z-index: 1;
+                margin-top: 150px;
+                padding: 0px;
+                align-items: center;
+                display: none;
+                .linkdetail-book {
+                    margin-bottom: 10px;
+                    color: white;
+                    font-size: 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: start;
+                    justify-content: center;
+                }
+            }
+            .thumbnail {
+                width: 120px;
+                height: 175.2px;
+                margin-top: -20px;
+                box-shadow: 0 0 11px rgba(33, 33, 33, 0.5);
+            }
+            .introduce {
+                width: 90px;
+                height: 149px;
+                max-height: 149px;
+                display: flex;
+                flex-direction: column;
+                .titlebook {
+                    margin-top: 5px;
+                    font-size: 14px;
+                    text-align: start;
+                    color: black;
+                    max-height: 42px;
+                    overflow-y: hidden;
+                    margin: 0px;
+                    min-height: 42px;
+                }
+                .vote-icon {
+                    font-size: 13px;
+                    text-align: start;
+                    color: rgba(33, 33, 33, 0.3);
+                }
+                .vote-number {
+                    font-size: 13px;
+                    text-align: start;
+                    color: rgba(33, 33, 33, 0.7);
+                }
+                .author {
+                    font-size: 13px;
+                    text-align: start;
+                    color: rgba(33, 33, 33, 0.7);
+                    height: 19.5px;
+                    overflow-y: hidden;
+                }
+                .short-description {
+                    font-size: 13px;
+                    line-height: 22px;
+                    text-align: start;
+                    overflow-y: hidden;
+                    color: rgba(33, 33, 33, 0.7);
+                }
+            }
+        }
+        .views {
+            border-top: 1px solid rgba(33, 33, 33, 0.05);
+            height: 27.7px;
+            font-size: 13px;
+            display: flex;
+            color: black;
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+            margin-right: 50px;
+            .views-icon {
+                font-size: 18px;
+                color: #1ba085;
+            }
+            span {
+                padding-left: 10px;
+            }
+        }
+    }
+}

@@ -21,7 +21,7 @@ router.post("/update-json-file", updateJSON.updateJSON);
 router.get("/rule", ruleController.getData);
 router.post("/add-rule", updateRule.updateRule);
 router.delete("/collection/:id", arinvoiceController.deleteData);
-
+router.get("/get-bookbill", bookBillController.getData);
 router.get("/arinvoice-list", arinvoiceController.getData);
 
 router.post("/add-arinvoice", arinvoiceController.updateArinvoice);

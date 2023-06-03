@@ -63,8 +63,8 @@ export default function Collection() {
               <StyledTableCell>Họ tên</StyledTableCell>
               <StyledTableCell align="right">Địa chỉ</StyledTableCell>
               <StyledTableCell align="right">SĐT</StyledTableCell>
-              <StyledTableCell align="right">Tổng nợ</StyledTableCell>
-              <StyledTableCell align="right">Thu nợ</StyledTableCell>
+
+              <StyledTableCell align="right">Thu phiếu</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -75,9 +75,7 @@ export default function Collection() {
                 </StyledTableCell>
                 <StyledTableCell align="right">{row.adress}</StyledTableCell>
                 <StyledTableCell align="right">{row.phone}</StyledTableCell>
-                <StyledTableCell align="right">
-                  {row.tob - row.paid}
-                </StyledTableCell>
+
                 <StyledTableCell align="right">
                   <Button
                     size="lg"

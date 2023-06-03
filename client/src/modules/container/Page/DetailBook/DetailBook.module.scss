@@ -1,0 +1,73 @@
+.wrapper {
+    width: 1100px;
+    padding: 20px;
+    .category {
+    }
+    .content {
+        display: flex;
+        .content-left {
+            .content-left-top {
+                .cover {
+                    img {
+                        width: 240px;
+                        height: 350px;
+                        box-shadow: 0 0 11px rgba(33, 33, 33, 0.6);
+                    }
+                }
+            }
+            .content-left-bottom {
+                padding-top: 20px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                div {
+                    border-radius: 50%;
+                    width: 35px;
+                    height: 35px;
+                    background-color: rgb(184, 184, 184, 0.1);
+                    .heart-icon {
+                        cursor: pointer;
+                        color: rgb(112, 112, 110);
+                        margin-bottom: 8px;
+                        font-size: 22px;
+                        &:hover {
+                            color: rgb(238, 171, 26);
+                            font-size: 18px;
+                        }
+                    }
+                }
+                span {
+                    color: black;
+                    font-size: 14px;
+                }
+            }
+        }
+        .content-right {
+            padding-left: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            .book-detail {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                span {
+                    color: black;
+                    font-size: 14px;
+                    line-height: 28px;
+                }
+                p {
+                    font-size: 16px;
+                    color: black;
+                    text-align: start;
+                    margin-top: 20px;
+                }
+                h4 {
+                    color: black;
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

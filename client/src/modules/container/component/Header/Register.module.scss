@@ -1,0 +1,170 @@
+.notification {
+    color: red;
+    display: flex;
+    align-items: end;
+    padding-left: 20px;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+}
+.your-account {
+    .account_icon {
+        position: absolute;
+        left: 46px;
+        width: 18px;
+        height: 18px;
+        top: 118px;
+        transform: translateY(-50%);
+        background-image: url('https://ebook.waka.vn/themes/desktop/images/account_login.png');
+    }
+    .form-control {
+        border-radius: 20px;
+        margin-top: 15px;
+        height: 40px;
+        width: 100%;
+        padding-left: 50px;
+        outline: none;
+        display: block;
+        font-size: 14px;
+        line-height: 1.25;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+}
+.your-phone-mail {
+    .phone_icon {
+        position: absolute;
+        left: 46px;
+        width: 18px;
+        height: 18px;
+        top: 175px;
+        transform: translateY(-50%);
+        background: url('https://ebook.waka.vn/themes/desktop/images/phone_login.png');
+    }
+    .form-control {
+        border-radius: 20px;
+        margin-top: 15px;
+        height: 40px;
+        width: 100%;
+        padding-left: 50px;
+        outline: none;
+        display: block;
+        font-size: 14px;
+        line-height: 1.25;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+}
+.your-password {
+    .password_icon {
+        position: absolute;
+        left: 46px;
+        width: 18px;
+        height: 18px;
+        top: 230px;
+        transform: translateY(-50%);
+        background-image: url('https://ebook.waka.vn/themes/desktop/images/password_login.png');
+    }
+    .form-control {
+        border-radius: 20px;
+        margin-top: 15px;
+        height: 40px;
+        width: 100%;
+        padding-left: 50px;
+        outline: none;
+        display: block;
+        font-size: 14px;
+        line-height: 1.25;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+}
+.repeat-your-password {
+    .password_icon {
+        position: absolute;
+        left: 46px;
+        width: 18px;
+        height: 18px;
+        top: 285px;
+        transform: translateY(-50%);
+        background-image: url('https://ebook.waka.vn/themes/desktop/images/password_login.png');
+    }
+    .form-control {
+        border-radius: 20px;
+        margin-top: 15px;
+        height: 40px;
+        width: 100%;
+        padding-left: 50px;
+        outline: none;
+        display: block;
+        font-size: 14px;
+        line-height: 1.25;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+}
+.rules {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    input {
+        margin-right: 5px;
+    }
+}
+.button-login {
+    border-radius: 20px;
+    background-color: #1ba085;
+    color: #ffffff;
+    text-transform: uppercase;
+    width: calc(100%);
+    height: 40px;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    &:hover {
+        background-color: #078168;
+    }
+}
+.ask {
+    display: flex;
+    justify-content: center;
+    a {
+        color: #1ba085;
+        text-decoration: none;
+        cursor: pointer;
+        padding-left: 2px;
+    }
+    &:hover {
+        a {
+            color: #078168;
+        }
+    }
+}
+
+.box-auth-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 18px;
+    .top {
+        text-align: center;
+        font-size: 15px;
+    }
+    .a-login-ul {
+        list-style: none;
+        display: flex;
+        padding-left: 0px;
+        .logo-fb {
+            padding-right: 10px;
+        }
+        .logo-gg {
+            padding-left: 10px;
+        }
+        img {
+            width: 40px;
+            height: 40px;
+        }
+        li {
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+}

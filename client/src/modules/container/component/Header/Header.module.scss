@@ -1,0 +1,275 @@
+.wrapper {
+  background-color: white;
+  width: 1530px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+  .header-top {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    height: 60px;
+    width: 1100px;
+    display: flex;
+    margin-right: 10px;
+    .logo-search {
+      display: flex;
+      align-items: center;
+      width: 650px;
+      .search {
+        display: flex;
+        align-items: center;
+        position: relative;
+        input {
+          height: 24.25px;
+          padding: 0px;
+          border: 1px rgb(0, 0, 0, 0.2) solid;
+          margin-left: 80px;
+          width: 353px;
+          outline: none;
+          border-radius: 3px;
+          font-size: 13px;
+          padding-left: 10px;
+        }
+        .result-search {
+          position: absolute;
+          margin-left: 80px;
+          width: 353px;
+          list-style: none;
+          top: 25px;
+          background-color: white;
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          height: fit-content;
+          border-radius: 5px;
+          box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+          padding-top: 10px;
+          padding-left: 0px;
+          z-index: 10;
+          .list-book-search-li {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            .list-book-search {
+              color: black;
+              text-align: start;
+              font-size: 13px;
+              overflow: hidden;
+              height: 40px;
+              cursor: pointer;
+              width: 100%;
+              border-radius: 2px;
+              padding-left: 20px;
+              display: flex;
+              align-items: center;
+              text-decoration: none;
+              transition: all 0.2s linear;
+              &:hover {
+                background-color: rgb(160, 160, 160, 0.2);
+                color: #1ba085;
+              }
+            }
+          }
+        }
+        button {
+          height: 25.85px;
+          width: 93px;
+          padding: 0px;
+          border: none;
+          background: #1ba085;
+          margin-right: 20px;
+          color: white;
+          display: flex;
+          align-items: center;
+          font-size: 13px;
+          transition: all 0.2s linear;
+          &:hover {
+            background-color: #097a63;
+          }
+          .search-icon {
+            font-size: 20px;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+    .menu {
+      width: 302px;
+      margin-left: 150px;
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      a {
+        margin-bottom: 10px;
+      }
+      button {
+        border: none;
+        height: 26px;
+        width: 118px;
+        color: white;
+        background-color: #1ba085;
+        border-radius: 2px;
+        font-size: 13.5px;
+        transition: all 0.2s linear;
+        &:hover {
+          background-color: #097a63;
+        }
+      }
+      .tippy {
+        background-color: #1ba085;
+        .card-icon {
+          font-size: 150px;
+          height: 30px;
+          width: 30px;
+          color: aliceblue;
+          background-color: #eeb815;
+        }
+      }
+    }
+  }
+  .header-bottom {
+    height: 40px;
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    .nav {
+      display: flex;
+      list-style: none;
+      margin-top: 0;
+      li {
+        padding-right: 20px;
+        display: flex;
+        align-items: end;
+        .list:hover li {
+          display: block; /* Khi trỏ qua thì hiển thị các thẻ li */
+        }
+        .menu {
+          height: 34px;
+          .submenu {
+            height: 45px;
+          }
+          .submenu:hover {
+            color: #1ba085;
+            background-color: transparent;
+          }
+        }
+        span {
+          display: flex;
+          align-items: end;
+          .list-icon {
+            color: black;
+            font-size: 20px;
+          }
+        }
+        .link-menu {
+          font-size: 15px;
+          text-decoration: none;
+          color: black;
+          display: flex;
+          align-items: center;
+          .home-icon {
+            font-size: 18px;
+            margin-right: 10px;
+          }
+        }
+        .link-menu-not {
+          font-size: 15px;
+          text-decoration: none;
+          color: rgb(168, 168, 168);
+          display: flex;
+          align-items: center;
+          .home-icon {
+            font-size: 18px;
+            margin-right: 10px;
+          }
+        }
+        .link-menu:hover {
+          color: #1ba085;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+}
+@media screen and (max-width: 991px) {
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .wrapper {
+    width: 100% !important;
+    .header-top {
+      width: 100%;
+      .logo-search {
+        .logo {
+          display: none;
+        }
+        .search {
+          width: 100%;
+          input {
+          }
+        }
+      }
+      .menu {
+        a {
+          img {
+            margin-left: -250%;
+          }
+        }
+        button {
+          margin-left: -120%;
+        }
+      }
+    }
+    .header-bottom {
+      .nav {
+        margin-left: -27%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .wrapper {
+    width: 100% !important;
+    .header-top {
+      width: 100%;
+      .logo-search {
+        .logo {
+          display: none;
+        }
+        .search {
+          width: 50% !important;
+          margin-left: -10% !important;
+          input {
+          }
+          button {
+            padding: 0px 0px !important;
+          }
+        }
+      }
+      .menu {
+        a {
+          img {
+            display: none;
+          }
+        }
+        button {
+          margin-left: -300%;
+        }
+      }
+    }
+    .header-bottom {
+      .nav {
+        margin-left: -76%;
+        li:nth-child(3),
+        li:nth-child(4),
+        li:nth-child(5),li:nth-child(6) {
+          display: none;
+        }
+      }
+    }
+  }
+}

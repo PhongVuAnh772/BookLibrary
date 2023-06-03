@@ -1,8 +1,8 @@
 import { React, useState } from "react";
 import { Button, Container, Form, FormGroup } from "react-bootstrap";
 import "./Home.css";
-import axios from "axios"
-import {Navigate, redirect, useNavigate } from 'react-router-dom'
+import axios from "axios";
+import { Navigate, redirect, useNavigate } from "react-router-dom";
 
 function Home() {
   const [email, setEmail] = useState("");
@@ -11,88 +11,82 @@ function Home() {
   const [messagePassError, setMessagePassError] = useState("");
   const [errorInput, setErrorInput] = useState("");
   const [errorPassInput, setErrorPassInput] = useState("");
-  const [login, setLogin] = useState('')
+  const [login, setLogin] = useState("");
   const navigate = useNavigate();
 
   const handleOnChange = (e) => {
     setEmail(e.target.value);
     setMessageError("");
-    setErrorInput('');
+    setErrorInput("");
   };
   const handleOnChangePass = (e) => {
     setPassWord(e.target.value);
     setMessagePassError("");
-    setErrorPassInput('');
+    setErrorPassInput("");
   };
 
   const handleLogin = async () => {
-    let response = await axios.post('http://localhost:5000/api/login', {user_name: email, password: PassWord});
-    if(response && response.data && response.data.success === true) {
-      console.log("Successfully logged in")
+    let response = await axios.post("http://localhost:5000/api/login", {
+      user_name: email,
+      password: PassWord,
+    });
+    if (response && response.data && response.data.success === true) {
+      console.log("Successfully logged in");
       window.history.pushState(null, null, window.location.href);
-        window.onpopstate = function(event) {
-            window.history.go(1);
-        };
-      document.documentElement.requestFullscreen();
-      window.onload = function() {
-        setTimeout(function() {
-            window.scrollTo(0, 1);
-        }, 0);
-    };
-      navigate("/screen/home");
-    }else {
-      setMessagePassError(response.data.message)
-    }
+      window.onpopstate = function (event) {
+        window.history.go(1);
+      };
 
-  }
-  
-  const emailValidation = () => {
-    const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if (!validRegex.test(email) || email === "") {
-      setMessageError("Email nhập không đúng, hãy nhập lại");
-      setErrorInput('error-input')
+      window.onload = function () {
+        setTimeout(function () {
+          window.scrollTo(0, 1);
+        }, 0);
+      };
+      navigate("/screen/home");
     } else {
-      setMessageError("");
-      setErrorInput('');
-      
+      setMessagePassError(response.data.message);
     }
   };
-  
+
+  const emailValidation = () => {
+    const validRegex =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (!validRegex.test(email) || email === "") {
+      setMessageError("Email nhập không đúng, hãy nhập lại");
+      setErrorInput("error-input");
+    } else {
+      setMessageError("");
+      setErrorInput("");
+    }
+  };
+
   const PassWordValidation = () => {
     const validRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
     if (!validRegex.test(PassWord) || PassWord === "") {
       setMessagePassError("Password nhập không đúng, hãy nhập lại");
-      setErrorPassInput('error-input')
+      setErrorPassInput("error-input");
     } else {
       setMessagePassError("");
       setErrorPassInput("");
     }
   };
-  const getValue = (e) => { 
+  const getValue = (e) => {
     const validRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
-    const validRegex2 = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const validRegex2 =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-    let value = {email, PassWord}
-    if ((!validRegex.test(PassWord)) || (!validRegex2.test(email))) {
-      value = {}
+    let value = { email, PassWord };
+    if (!validRegex.test(PassWord) || !validRegex2.test(email)) {
+      value = {};
       console.log(value);
-      console.log((validRegex.test(PassWord)))
-      console.log((validRegex2.test(email)))
+      console.log(validRegex.test(PassWord));
+      console.log(validRegex2.test(email));
+    } else {
+      console.log(value);
     }
-    else {
-      console.log(value)
-      
-    }
-    // }) 
-  }
+    // })
+  };
 
- 
-
-  
-
-  
-
-  
   return (
     <Container className="d-grid" id="main-container">
       <Form className="text-center" id="sign-in-form">

@@ -1,15 +1,9 @@
-.Search {
-    margin-top: -100px;
+.Search-admin-form {
+  width: 500px;
+  padding: 10px;
 }
 
-.Search-form {
-    margin-left: -137px;
-}
-
-.tableContainer {
-    margin-left: 25px;
-}
-
-.Search-button {
-    margin: -2px 0px 16px 26px;
+.Search-admin {
+  padding-left: 20px;
+  padding-top: 20px;
 }

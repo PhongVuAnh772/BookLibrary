@@ -1,42 +1,17 @@
 .Bill {
-    margin-top: -100px;
+  margin-left: 20px;
+  padding-top: 20px;
 }
 
 .Bill-form {
-    margin-left: -137px;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
-.Bill-form-div {
-    display: flex;
-}
-
-.tableContainer {
-    margin-left: 25px;
-}
-
-.form-control-sm {
-    width: 463px;
-    padding:10px;
-}
-
-.form-control-sm-2 {
-    margin-left: 50px;
-    padding:10px;
-}
-
-.Bill-button {
-    margin: 18px 25px 33px 26px;
-
-}
-
-.totalBill {
-    font-size: 20px;
-}
-
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0; 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }

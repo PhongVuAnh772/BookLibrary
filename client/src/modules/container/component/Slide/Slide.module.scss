@@ -1,0 +1,20 @@
+.slide {
+  height: 278.5px;
+  width: 1100px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 992px) {
+}
+@media screen and (max-width: 991px) {
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+@media screen and (max-width: 767px) {
+  .slide {
+    width: 35% !important;
+    img {
+      width: 100% !important;
+    }
+  }
+}

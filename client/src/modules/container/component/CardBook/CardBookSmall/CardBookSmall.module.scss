@@ -1,0 +1,101 @@
+.card-box {
+    width: 150px;
+    height: 250.6px;
+    border: 1px solid rgba(33, 33, 33, 0.1);
+    border-radius: 3px;
+    margin: 0 15px 0 15px;
+    background-color: white;
+    transition: all 0.2s linear;
+    &:hover {
+        box-shadow: 0 0 15px rgba(33, 33, 33, 0.5);
+    }
+    .card-body {
+        width: 150px;
+        height: 206px;
+        display: flex;
+        align-items: center;
+        img {
+            width: 120px;
+            height: 176px;
+            box-shadow: 0 0 11px rgba(33, 33, 33, 0.4);
+            margin: auto;
+        }
+        .coating {
+            display: none;
+            width: 150px;
+            height: 206px;
+            button {
+                border: 1px solid white;
+                background-color: transparent;
+                border-radius: 3px;
+                font-size: 18px;
+                transition: all 0.2s linear;
+                .linkdetail-book {
+                    color: white;
+                    text-decoration: none;
+                    font-size: 18px;
+                }
+                &:hover {
+                    background-color: white;
+                    border: 1px #1ba085 solid;
+                    .linkdetail-book {
+                        color: #1ba085;
+                    }
+                }
+            }
+            .hover-category {
+                color: white;
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 10px;
+                transition: all 0.2s linear;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            span {
+                width: 120px;
+                max-height: 2.6em;
+                min-height: 2.6em;
+                overflow-y: hidden;
+
+                margin-bottom: 10px;
+                .hover-branch {
+                    color: white;
+                    text-decoration: none;
+                    font-size: 14px;
+                    transition: all 0.2s linear;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        transition: all 0.2s linear;
+        &:hover {
+            cursor: pointer;
+            .coating {
+                display: block;
+                flex-direction: column;
+                padding-top: 15px;
+                background-color: #1ba085;
+                position: absolute;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    .card-footer {
+        width: 150px;
+        height: 44.6px;
+        border-top: 2px solid #1ba085;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span {
+            font-size: 16px;
+            color: black;
+        }
+    }
+}

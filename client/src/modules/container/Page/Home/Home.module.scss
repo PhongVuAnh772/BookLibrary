@@ -1,0 +1,114 @@
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+.wrapper {
+  margin-top: 0px;
+  .content1 {
+    margin-top: 30px;
+    display: flex;
+    .news {
+      width: 250px;
+      height: 850px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+      ul {
+        padding: 0px 20px 0px 20px;
+        list-style: none;
+        li {
+          border-top: 1px solid rgb(138, 138, 138, 0.3);
+          padding: 15px 0px 15px 0px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+      .title-news {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .news-icon {
+          color: black;
+          font-size: 20px;
+          margin-right: 20px;
+          margin-bottom: 7px;
+        }
+        p {
+          color: black;
+          font-size: 20px;
+          margin-top: 9px;
+          margin-left: 20px;
+        }
+      }
+    }
+    .free-hot {
+      padding-left: 20px;
+      flex: 1;
+      height: 850px;
+      max-height: 850px;
+      max-width: 850px;
+      .title-free-hot {
+        width: 820px;
+        height: 35px;
+        color: black;
+        font-size: 20px;
+        text-align: start;
+        border-bottom: 1px solid rgba(33, 33, 33, 0.2);
+      }
+    }
+  }
+  .content2 {
+    width: 1100px;
+    height: 346px;
+    margin-top: 40px;
+    background-color: white;
+    margin-bottom: 50px;
+    .title-rank {
+      width: 1022px;
+      height: 35px;
+      margin-top: 10px;
+      color: black;
+      font-size: 20px;
+      text-align: start;
+      margin-left: 40px;
+      height: 50px;
+      border-bottom: 1px solid rgb(138, 138, 138, 0.3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .link-viewall {
+        font-size: 15px;
+        text-decoration: none;
+        color: #1ba085;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .best-rank {
+      margin: auto;
+      margin-top: 20px;
+      width: 1050px;
+      height: 260px;
+      overflow-y: visible;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      display: flex;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+}
+@media screen and (max-width: 991px) {
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+@media screen and (max-width: 767px) {
+  .wrapper {
+    div {
+      .slide {
+      }
+      .content1 {
+        margin-top: -10% !important;
+      }
+    }
+  }
+}

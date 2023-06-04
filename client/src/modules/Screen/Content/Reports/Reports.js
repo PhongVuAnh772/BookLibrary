@@ -24,6 +24,7 @@ function Reports() {
   };
   const handleReportSubmit = () => {
     setShowReport(true);
+    console.log(time);
   };
 
   return (

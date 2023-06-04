@@ -46,7 +46,25 @@ export default function ToDoList() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [rows, setUsers] = useState([]);
-
+  const [name, setName] = useState("");
+  const [desc, setDesc] = useState("");
+  const [statusPrice, setstatusPrice] = useState(false);
+  const handleAdd = () => {
+    axios
+      .post(`http://localhost:8083/add-rule`, {
+        ruleName: name,
+        ruleDesciption: desc,
+        status: statusPrice,
+      })
+      .then((response) => {
+        console.log(response.data);
+        window.location.reload();
+      })
+      .catch((error) => {
+        console.error(error);
+        window.location.reload();
+      });
+  };
   // console.log(listChange)
   const handleClick = (event, key) => {};
 
@@ -64,17 +82,16 @@ export default function ToDoList() {
     console.log(data.inventory);
     console.log(data.price);
   };
-  const handleClickDelete = (event, key) => {
-    axios
-      .delete(`http://localhost:8083/delete-rule`, {
-        id: 1,
-      })
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+  const handleClickDelete = async (event, key) => {
+    let response = await axios.delete(`http://localhost:8083/delete-rule`, {
+      id: key,
+    });
+
+    if (Object.keys(response.data).length === 0) {
+      window.location.reload();
+    } else {
+      console.log("Có lỗi khi đẩy dữ liệu");
+    }
   };
 
   function ReList(event, key) {
@@ -95,29 +112,41 @@ export default function ToDoList() {
             <Form>
               <Form.Group className="mb-3" controlId="formBasicText">
                 <Form.Label>Tên quy định</Form.Label>
-                <Form.Control type="text" placeholder="Nhập tên quy định" />
+                <Form.Control
+                  type="text"
+                  placeholder="Nhập tên quy định"
+                  onChange={(e) => setName(e.target.value)}
+                />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Row>
                   <Col>
                     <Form.Label>Giá trị</Form.Label>
-                    <Form.Control placeholder="" type="number" />
+                    <Form.Control
+                      placeholder=""
+                      type="number"
+                      onChange={(e) => setDesc(e.target.value)}
+                    />
                   </Col>
                 </Row>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicSub">
                 <Form.Label>Tình trạng sử dụng</Form.Label>
-                <Form.Control type="text" placeholder="Nhập thể loại" />
+                <Form.Control
+                  type="text"
+                  placeholder="Nhập thể loại"
+                  onChange={(e) => setstatusPrice(e.target.value)}
+                />
               </Form.Group>
             </Form>
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
-              Close
+              Đóng
             </Button>
-            <Button variant="primary" type="submit">
-              Submit
+            <Button variant="primary" type="submit" onClick={handleAdd}>
+              Tạo mới
             </Button>
           </Modal.Footer>
         </Modal>
@@ -156,10 +185,10 @@ export default function ToDoList() {
             {rows.map((row, key) => (
               <StyledTableRow key={key}>
                 <StyledTableCell component="th" scope="row">
-                  {row.rule_name}
+                  {row.ruleName}
                 </StyledTableCell>
                 <StyledTableCell align="right">
-                  {row.rule_desciption}
+                  {row.ruleDesciption}
                 </StyledTableCell>
                 <StyledTableCell align="right">{row.status}</StyledTableCell>
 
@@ -174,7 +203,7 @@ export default function ToDoList() {
                   <Button
                     variant="outline-danger"
                     className="tableContainer-row-button"
-                    onClick={(event) => handleClickDelete(event, key)}
+                    onClick={(event) => handleClickDelete(event, row.id)}
                     key={key}
                   >
                     <FcFullTrash />
